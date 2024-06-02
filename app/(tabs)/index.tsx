@@ -40,11 +40,11 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step X: Routing</ThemedText>
         <Link href={{ pathname: '/user/[id]', params: { id: 123 } }}>
-          <Pressable style={({ pressed }) => [{ opacity: pressed ? 0.5 : 1 }]}>
-            <ThemedText style={styles.userInfo}>
-              Click here to route with param 123 to (user/[id].tsx)
-            </ThemedText>
-          </Pressable>
+          {/* <Pressable style={({ pressed }) => [{ opacity: pressed ? 0.5 : 1 }]}> */}
+          <ThemedText style={styles.userInfo}>
+            Click here to route with param 123 to (user/[id].tsx)
+          </ThemedText>
+          {/* </Pressable> */}
         </Link>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
