@@ -16,8 +16,8 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/beeny-header.jpg')}
+          style={styles.beenyLogo}
         />
       }
     >
@@ -26,7 +26,7 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Step 0: File Structure</ThemedText>
         <ThemedText>
           Edit{' '}
           <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{' '}
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
+  beenyLogo: {
+    height: 250,
+    width: 420,
     bottom: 0,
     left: 0,
     position: 'absolute',
