@@ -39,11 +39,13 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step X: Routing</ThemedText>
-        <ThemedText>
-          <Link href={{ pathname: '/user/[id]', params: { id: 123 } }}>
-            Click here to route with param 123 to (user/[id].tsx)
-          </Link>
-        </ThemedText>
+        <Link href={{ pathname: '/user/[id]', params: { id: 123 } }}>
+          <Pressable style={({ pressed }) => [{ opacity: pressed ? 0.5 : 1 }]}>
+            <ThemedText style={styles.userInfo}>
+              Click here to route with param 123 to (user/[id].tsx)
+            </ThemedText>
+          </Pressable>
+        </Link>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step Y: Modal</ThemedText>
@@ -67,6 +69,9 @@ const styles = StyleSheet.create({
   stepContainer: {
     gap: 8,
     marginBottom: 8,
+  },
+  userInfo: {
+    color: 'white',
   },
   beenyLogo: {
     height: 250,
