@@ -4,6 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   return (
@@ -29,7 +30,15 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">
             {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
           </ThemedText>{' '}
-          to open developer tools.
+          to open developer tools.{' '}
+        </ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Step X: Routing</ThemedText>
+        <ThemedText>
+          <Link href={{ pathname: '/user/[id]', params: { id: 123 } }}>
+            Click here to route with param 123 to (user/[id].tsx)
+          </Link>
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
